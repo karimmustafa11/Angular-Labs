@@ -1,0 +1,13 @@
+<div>
+    @if(student) {
+    <p>ID: {{student.id}}</p>
+    <p>Student Name: {{student.name}}</p>
+    <p>Email: {{student.email}}</p>
+    <p>Phone: {{student.phone}}</p>
+    }
+    @else {
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only"></span>
+    </div>
+    }
+</div>

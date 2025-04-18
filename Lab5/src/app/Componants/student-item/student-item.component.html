@@ -1,0 +1,7 @@
+<div class="text-center p-3 bg-light-subtle mb-3 rounded-2">
+    <p>Student Name: {{ student.name }}</p>
+    <p>Email: 
+      <a [routerLink]="['/students', student.id]">{{ student.email }}</a>
+    </p>
+  </div>
+  
