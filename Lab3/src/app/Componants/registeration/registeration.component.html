@@ -1,0 +1,29 @@
+<div class="flex justify-center mt-6">
+
+    <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+        <legend class="fieldset-legend">Student Form</legend>
+
+        <label class="fieldset-label">Name</label>
+        <input type="text" class="input" placeholder="Enter Your Name" [(ngModel)]="name" />
+        <p *ngIf="name && name.length>=3" style="color:green;">
+            Valid Name
+        </p>
+
+        <p *ngIf="name && name.length<3" style="color:red;">
+            Invalid Name
+        </p>
+
+        <label class="fieldset-label">Age</label>
+        <input type="number" class="input" placeholder="Enter Your Age" [(ngModel)]="age" />
+        <p *ngIf="age && +age >= 10 && +age <= 30" style="color:green;">
+            Age is within the valid range
+        </p>
+
+        <p *ngIf="age && (+age < 10 || +age > 30)" style="color:red;">
+            Age is out of the valid range
+        </p>
+
+        <button class="btn btn-neutral mt-4 " (click)="Add()">Add</button>
+    </fieldset>
+
+</div>
