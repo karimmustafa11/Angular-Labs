@@ -1,0 +1,31 @@
+<div class="flex justify-center mt-6">
+    <form [formGroup]="myForm">
+        <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+            <legend class="fieldset-legend">Student Form</legend>
+
+            <label class="fieldset-label">Name</label>
+            <input type="text" class="input" placeholder="Enter Your Name" formControlName="name" />
+
+            @if (myForm.controls["name"].value&&Name) {
+            <p style="color:green;">Valid Name</p>
+            }
+
+            @if(myForm.controls["name"].value &&!Name){
+            <p style="color:red;">Invalid Name (at least 3 characters)</p>
+            }
+
+            <label class="fieldset-label">Age</label>
+            <input type="text" class="input" placeholder="Enter Your Age" formControlName="age" />
+
+            @if (myForm.controls["age"].value&&Age) {
+            <p style="color:green;">Age is within the valid range</p>
+            }
+
+            @if (myForm.controls["age"].value&&!Age) {
+            <p style="color:red;">Age must be between 15 and 30</p>
+            }
+
+            <input class="btn btn-neutral mt-4" type="submit" value="Add" (click)="Add()">
+        </fieldset>
+    </form>
+</div>
