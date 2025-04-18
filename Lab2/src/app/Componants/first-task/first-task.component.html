@@ -1,0 +1,18 @@
+<div class="flex h-screen  flex-col gap-4  text-center mt-8 items-center ">
+
+    <div class="mb-8 border-2 p-4 rounded-2xl border-amber-200"> <input type="text" name="" id="" [(ngModel)]="fname"
+            class="border-2 inline rounded-2xl p-3">
+        <p>Your name is: {{fname}}</p>
+        <input type="button" value="Reset" class="btn btn-accent" (click)="reset($event)">
+    </div>
+
+    <div class="border-2 p-4 rounded-2xl  border-amber-200">
+        <img [src]="srcImag" alt="" style="width: 300px; height: 200px; object-fit: cover;" class="mb-3">
+        <div class="w:{500px}">
+            <input type="button" value="Next" class="btn btn-accent ms-2" (click)="Next()">
+            <input type="button" value="Previos" class="btn btn-accent ms-2" (click)="Prev()">
+            <input type="button" value="Slide" class="btn btn-accent ms-2" (click)="Slide()">
+            <input type="button" value="Stop" class="btn btn-accent ms-2" (click)="Stop()">
+
+        </div>
+    </div>
